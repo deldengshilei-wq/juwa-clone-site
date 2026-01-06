@@ -2,20 +2,20 @@ import { Button } from "@/components/ui/button";
 
 const promos = [
   {
-    label: "首次充值优惠",
-    title: "100% 欢迎",
-    subtitle: "奖励",
+    label: "First Deposit Bonus",
+    title: "100% Welcome",
+    subtitle: "Bonus",
     gradient: "gradient-red",
   },
   {
-    label: "第二次充值优惠",
-    title: "50% 续充奖励",
+    label: "Second Deposit Bonus",
+    title: "50% Reload Bonus",
     subtitle: "",
     gradient: "gradient-orange",
   },
   {
-    label: "一起玩更有趣",
-    title: "¥50 推荐奖励",
+    label: "Play Together, Win Together",
+    title: "$50 Referral Bonus",
     subtitle: "",
     gradient: "gradient-gold",
   },
@@ -43,7 +43,7 @@ const PromoCards = () => {
               variant="outline"
               className="mt-4 border-primary-foreground/50 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
             >
-              立即加入
+              Join Now
             </Button>
           </div>
         ))}

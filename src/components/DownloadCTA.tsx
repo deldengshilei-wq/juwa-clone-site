@@ -9,10 +9,10 @@ const DownloadCTA = () => {
           <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
             <div className="text-center lg:text-left">
               <h2 className="mb-4 text-3xl font-bold text-primary-foreground md:text-4xl">
-                立即下载 Lucky777 应用
+                Download Lucky777 App Now
               </h2>
               <p className="text-lg text-primary-foreground/80">
-                在您的手机上畅享100+免费社交游戏
+                Enjoy 100+ free social games on your mobile device
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
