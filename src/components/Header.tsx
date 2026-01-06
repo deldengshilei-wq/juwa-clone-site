@@ -31,7 +31,7 @@ const Header = () => {
               <Sparkles className="h-6 w-6 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold text-foreground">
-              Lucky<span className="text-primary">777</span>
+              Juwa<span className="text-primary">777</span>
             </span>
           </a>
 
@@ -57,7 +57,7 @@ const Header = () => {
             </Button>
             <Button size="sm" className="gap-2">
               <Sparkles className="h-4 w-4" />
-              Get Started
+              Play now
             </Button>
           </div>
 
@@ -96,7 +96,7 @@ const Header = () => {
                 </Button>
                 <Button size="sm" className="gap-2">
                   <Sparkles className="h-4 w-4" />
-                  Get Started
+                  Play now
                 </Button>
               </div>
             </nav>

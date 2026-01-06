@@ -6,6 +6,7 @@ import Features from "@/components/Features";
 import Games from "@/components/Games";
 import DownloadCTA from "@/components/DownloadCTA";
 import Footer from "@/components/Footer";
+import FloatingSocial from "@/components/FloatingSocial";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <DownloadCTA />
       </main>
       <Footer />
+      <FloatingSocial />
     </div>
   );
 };
