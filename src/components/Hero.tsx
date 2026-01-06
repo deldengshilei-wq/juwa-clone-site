@@ -19,12 +19,11 @@ const Hero = () => {
       <div className="relative container mx-auto flex min-h-[600px] flex-col justify-center px-4 py-20">
         <div className="max-w-2xl">
           <h1 className="mb-6 text-4xl font-extrabold leading-tight text-foreground md:text-5xl lg:text-6xl">
-            Lucky777 – Free Social Gaming Platform
-            <span className="text-primary"> Android & iOS</span>
+            Juwa777 – Free Social Gaming App for Android & iOS
           </h1>
           <p className="mb-8 text-lg text-muted-foreground md:text-xl">
-            Experience unparalleled gaming quality and customer service. Start playing Lucky777 - 
-            the premier gaming platform with over 100 free social entertainment games.
+            Experience unmatched quality in gameplay and customer service. Play Juwa777 - 
+            the premier Juwa game platform with over 100 free social casino games.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button size="lg" className="gap-2 glow-red">

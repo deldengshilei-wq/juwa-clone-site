@@ -2,20 +2,20 @@ import { Button } from "@/components/ui/button";
 
 const promos = [
   {
-    label: "First Deposit Bonus",
+    label: "1st Deposit Offer",
     title: "100% Welcome",
     subtitle: "Bonus",
     gradient: "gradient-red",
   },
   {
-    label: "Second Deposit Bonus",
+    label: "2nd Deposit Offer",
     title: "50% Reload Bonus",
     subtitle: "",
     gradient: "gradient-orange",
   },
   {
-    label: "Play Together, Win Together",
-    title: "$50 Referral Bonus",
+    label: "Play together and enjoy",
+    title: "$5 Referral Bonus",
     subtitle: "",
     gradient: "gradient-gold",
   },
