@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 
 const navLinks = [
-  { name: "首页", href: "#", active: true },
-  { name: "游戏", href: "#games" },
-  { name: "关于我们", href: "#about" },
-  { name: "博客", href: "#blog" },
-  { name: "联系我们", href: "#contact" },
+  { name: "Home", href: "#", active: true },
+  { name: "Games", href: "#games" },
+  { name: "About Us", href: "#about" },
+  { name: "Blog", href: "#blog" },
+  { name: "Contact", href: "#contact" },
 ];
 
 const Header = () => {
@@ -18,7 +18,7 @@ const Header = () => {
       {/* Top banner */}
       <div className="bg-primary py-2 text-center text-sm text-primary-foreground">
         <span className="inline-flex items-center gap-2">
-          ⚠️ 18+ 仅限 | 仅供娱乐目的 | 请理性游戏
+          ⚠️ 18+ Only | For Entertainment Purposes Only | Play Responsibly
         </span>
       </div>
 
@@ -53,11 +53,11 @@ const Header = () => {
           {/* Desktop CTA Buttons */}
           <div className="hidden items-center gap-3 md:flex">
             <Button variant="outline" size="sm">
-              常见问题
+              FAQ
             </Button>
             <Button size="sm" className="gap-2">
               <Sparkles className="h-4 w-4" />
-              立即开始
+              Get Started
             </Button>
           </div>
 
@@ -92,11 +92,11 @@ const Header = () => {
               ))}
               <div className="flex flex-col gap-2 pt-4">
                 <Button variant="outline" size="sm">
-                  常见问题
+                  FAQ
                 </Button>
                 <Button size="sm" className="gap-2">
                   <Sparkles className="h-4 w-4" />
-                  立即开始
+                  Get Started
                 </Button>
               </div>
             </nav>

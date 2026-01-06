@@ -3,33 +3,33 @@ import { Gamepad2, Shield, Smartphone, Gift, Users, Headphones } from "lucide-re
 const features = [
   {
     icon: Gamepad2,
-    title: "100+ 免费游戏",
-    description: "海量老虎机、捕鱼游戏、基诺等精彩游戏等你体验",
+    title: "100+ Free Games",
+    description: "Massive collection of slots, fishing games, keno, and more exciting games",
   },
   {
     icon: Smartphone,
-    title: "移动端优先",
-    description: "专为 Android 和 iOS 设备优化的流畅游戏体验",
+    title: "Mobile First",
+    description: "Smooth gaming experience optimized for Android and iOS devices",
   },
   {
     icon: Shield,
-    title: "安全可靠",
-    description: "采用先进的安全技术保护您的账户和游戏数据",
+    title: "Safe & Secure",
+    description: "Advanced security technology to protect your account and gaming data",
   },
   {
     icon: Gift,
-    title: "丰厚奖励",
-    description: "每日登录奖励、任务奖励、推荐奖励等你来拿",
+    title: "Generous Rewards",
+    description: "Daily login rewards, mission rewards, referral bonuses and more",
   },
   {
     icon: Users,
-    title: "社交互动",
-    description: "与好友一起游戏，分享快乐，赢取更多奖励",
+    title: "Social Gaming",
+    description: "Play with friends, share the fun, and win more rewards together",
   },
   {
     icon: Headphones,
-    title: "24/7 客服",
-    description: "专业客服团队全天候为您提供帮助和支持",
+    title: "24/7 Support",
+    description: "Professional support team available around the clock to help you",
   },
 ];
 
@@ -38,7 +38,7 @@ const Features = () => {
     <section className="bg-card py-20">
       <div className="container mx-auto px-4">
         <h2 className="mb-12 text-center text-3xl font-bold text-foreground md:text-4xl">
-          为什么选择 Lucky777?
+          Why Choose Lucky777?
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
