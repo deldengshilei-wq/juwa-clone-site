@@ -1,38 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
-
-const games = [
-  {
-    name: "Lucky Fruits",
-    category: "Slots",
-    image: "https://images.unsplash.com/photo-1606167668584-78701c57f13d?q=80&w=400&auto=format&fit=crop",
-  },
-  {
-    name: "Ocean Fishing",
-    category: "Fishing Games",
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=400&auto=format&fit=crop",
-  },
-  {
-    name: "Golden Keno",
-    category: "Keno",
-    image: "https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?q=80&w=400&auto=format&fit=crop",
-  },
-  {
-    name: "Dragon Tiger",
-    category: "Arcade",
-    image: "https://images.unsplash.com/photo-1511882150382-421056c89033?q=80&w=400&auto=format&fit=crop",
-  },
-  {
-    name: "Diamond Dazzle",
-    category: "Slots",
-    image: "https://images.unsplash.com/photo-1551431009-a802eeec77b1?q=80&w=400&auto=format&fit=crop",
-  },
-  {
-    name: "Lucky Wheel",
-    category: "Casual Games",
-    image: "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=400&auto=format&fit=crop",
-  },
-];
+import { siteConfig } from "@/config/site.config";
 
 const Games = () => {
   return (
@@ -45,7 +13,7 @@ const Games = () => {
           Explore our selection of free social games
         </p>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {games.map((game, index) => (
+          {siteConfig.games.map((game, index) => (
             <div
               key={index}
               className="group relative overflow-hidden rounded-xl bg-card transition-transform hover:scale-105"
