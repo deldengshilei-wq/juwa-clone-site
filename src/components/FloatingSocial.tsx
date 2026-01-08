@@ -1,11 +1,12 @@
 import { MessageCircle, Phone } from "lucide-react";
+import { siteConfig } from "@/config/site.config";
 
 const FloatingSocial = () => {
   return (
     <div className="fixed right-4 top-1/2 z-50 flex -translate-y-1/2 flex-col gap-3">
       {/* Telegram */}
       <a
-        href="#"
+        href={siteConfig.telegram}
         className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0088cc] text-white shadow-lg transition-transform hover:scale-110"
         aria-label="Telegram"
       >
@@ -16,7 +17,7 @@ const FloatingSocial = () => {
       
       {/* Facebook Messenger */}
       <a
-        href="#"
+        href={siteConfig.messenger}
         className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0084ff] text-white shadow-lg transition-transform hover:scale-110"
         aria-label="Messenger"
       >
@@ -27,7 +28,7 @@ const FloatingSocial = () => {
       
       {/* WhatsApp */}
       <a
-        href="#"
+        href={siteConfig.whatsapp}
         className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110"
         aria-label="WhatsApp"
       >
@@ -38,7 +39,7 @@ const FloatingSocial = () => {
       
       {/* Live Chat */}
       <a
-        href="#"
+        href={siteConfig.customerService.liveChatUrl}
         className="flex h-12 w-12 items-center justify-center rounded-full bg-muted text-foreground shadow-lg transition-transform hover:scale-110"
         aria-label="Live Chat"
       >

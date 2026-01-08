@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Apple, Smartphone } from "lucide-react";
+import { siteConfig } from "@/config/site.config";
 
 const DownloadCTA = () => {
   return (
@@ -16,20 +17,24 @@ const DownloadCTA = () => {
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                size="lg"
-                className="gap-2 bg-black text-white hover:bg-black/80"
-              >
-                <Apple className="h-5 w-5" />
-                App Store
-              </Button>
-              <Button
-                size="lg"
-                className="gap-2 bg-black text-white hover:bg-black/80"
-              >
-                <Smartphone className="h-5 w-5" />
-                Google Play
-              </Button>
+              <a href={siteConfig.download.ios} target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="gap-2 bg-black text-white hover:bg-black/80"
+                >
+                  <Apple className="h-5 w-5" />
+                  App Store
+                </Button>
+              </a>
+              <a href={siteConfig.download.android} target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  className="gap-2 bg-black text-white hover:bg-black/80"
+                >
+                  <Smartphone className="h-5 w-5" />
+                  Google Play
+                </Button>
+              </a>
             </div>
           </div>
         </div>
