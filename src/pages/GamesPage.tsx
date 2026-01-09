@@ -31,15 +31,15 @@ const GamesPage = () => {
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Explore Juwa777 Games – Slots, Fish Games & Keno
+            Explore Top777 Games – Slots, Fish Games & Keno
           </h1>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-8">
-            Discover over 100 games available in the Juwa 777 app. Browse our selection of slots, fish shooting games, and keno for entertainment purposes only. Download the Juwa777 app to access the full games library on Android & iOS.
+            Discover over 100 games available in the Top 777 app. Browse our selection of slots, fish shooting games, and keno for entertainment purposes only. Download the Top777 app to access the full games library on Android & iOS.
           </p>
           <Button size="lg" className="gap-2" asChild>
             <Link to="/blog">
               <Sparkles className="h-5 w-5" />
-              Download Juwa777 App
+              Download Top777 App
             </Link>
           </Button>
         </section>
@@ -50,7 +50,7 @@ const GamesPage = () => {
             Explore Our Free Social Gaming Collection
           </h2>
           <p className="text-muted-foreground mb-4">
-            Juwa777 offers over 100 games in the app, featuring an extensive library of casino-style social games designed for entertainment purposes only. Our mobile gaming platform features three main categories: classic slot games, action-packed fish shooting games, and strategic keno games. All games are completely free to play. Download the Juwa 777 app to access and play all games on your Android or iOS device.
+            Top777 offers over 100 games in the app, featuring an extensive library of casino-style social games designed for entertainment purposes only. Our mobile gaming platform features three main categories: classic slot games, action-packed fish shooting games, and strategic keno games. All games are completely free to play. Download the Top 777 app to access and play all games on your Android or iOS device.
           </p>
           <p className="text-muted-foreground mb-12">
             Whether you enjoy the spinning reels of slot machines, the fast-paced action of fish shooting games, or the strategic number selection of keno, our diverse game collection has something for every gaming enthusiast. Each game category offers unique gameplay mechanics, engaging graphics, and entertaining features that provide hours of fun.

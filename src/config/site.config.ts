@@ -1,24 +1,24 @@
 // Site Configuration
 export const siteConfig = {
   // Social & Contact Links
-  facebook: "https://www.facebook.com/juwa777",
-  telegram: "https://t.me/juwa777",
+  facebook: "https://www.facebook.com/top777",
+  telegram: "https://t.me/top777",
   whatsapp: "https://wa.me/1234567890",
-  messenger: "https://m.me/juwa777",
-  email: "support@juwa777.com",
+  messenger: "https://m.me/top777",
+  email: "support@top777.com",
   
   // Customer Service
   customerService: {
-    liveChatUrl: "https://livechat.juwa777.com",
-    supportEmail: "support@juwa777.com",
+    liveChatUrl: "https://livechat.top777.com",
+    supportEmail: "support@top777.com",
     supportHours: "24/7",
   },
   
   // Download Links
   download: {
-    android: "https://download.juwa777.com/android",
-    ios: "https://download.juwa777.com/ios",
-    apk: "https://download.juwa777.com/juwa777.apk",
+    android: "https://download.top777.com/android",
+    ios: "https://download.top777.com/ios",
+    apk: "https://download.top777.com/top777.apk",
   },
   
   // Games Configuration

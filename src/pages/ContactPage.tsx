@@ -39,13 +39,13 @@ const ContactPage = () => {
         {/* Logo & Title Section */}
         <section className="container mx-auto px-4 py-12 text-center">
           <div className="w-64 h-40 mx-auto mb-8 bg-gradient-to-br from-red-500 to-yellow-500 rounded-2xl flex items-center justify-center">
-            <span className="text-4xl font-bold text-white">JUWA</span>
+            <span className="text-4xl font-bold text-white">TOP</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Contact Juwa777 Support Team
+            Contact Top777 Support Team
           </h1>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            We're here to help! Whether you have questions about accessing Juwa777 games, need assistance with your account, or want to learn more about our free social gaming platform and features, our support team is ready to assist you.
+            We're here to help! Whether you have questions about accessing Top777 games, need assistance with your account, or want to learn more about our free social gaming platform and features, our support team is ready to assist you.
           </p>
           <p className="text-muted-foreground mt-4">
             For quick answers to common questions, check out our <Link to="/faq" className="text-primary hover:underline">FAQ page</Link> or browse our <Link to="/blog" className="text-primary hover:underline">blog posts</Link> for detailed guides and tips.
@@ -63,7 +63,7 @@ const ContactPage = () => {
             <div>
               <h3 className="text-xl font-semibold text-foreground mb-4">Support Hours</h3>
               <p className="text-muted-foreground mb-4">
-                Our customer support team is available to assist you with any questions or concerns about the Juwa777 free social gaming platform, mobile gaming app, and online gaming experience.
+                Our customer support team is available to assist you with any questions or concerns about the Top777 free social gaming platform, mobile gaming app, and online gaming experience.
               </p>
               <p className="text-muted-foreground">
                 We typically respond to inquiries within 24-48 hours. For urgent matters, please use the contact form below with detailed information about your issue.
@@ -126,7 +126,7 @@ const ContactPage = () => {
                   <Mail className="h-8 w-8 text-primary" />
                   <div>
                     <h4 className="font-semibold text-foreground">Email support</h4>
-                    <p className="text-muted-foreground text-sm">juwa@juwa777.com</p>
+                    <p className="text-muted-foreground text-sm">top@top777.com</p>
                   </div>
                 </div>
               </div>

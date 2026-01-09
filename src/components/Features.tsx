@@ -38,7 +38,7 @@ const Features = () => {
     <section className="bg-card py-20">
       <div className="container mx-auto px-4">
         <h2 className="mb-12 text-center text-3xl font-bold text-foreground md:text-4xl">
-          Why Choose Lucky777?
+          Why Choose Top777?
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (

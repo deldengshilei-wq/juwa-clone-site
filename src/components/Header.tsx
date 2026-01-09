@@ -33,7 +33,7 @@ const Header = () => {
               <Sparkles className="h-6 w-6 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold text-foreground">
-              Juwa<span className="text-primary">777</span>
+              Top<span className="text-primary">777</span>
             </span>
           </Link>
 
