@@ -1,9 +1,11 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { siteConfig } from "@/config/site.config";
 
 const gameCategories = [
   {
@@ -24,6 +26,16 @@ const gameCategories = [
 ];
 
 const GamesPage = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredGames = activeCategory === "All" 
+    ? siteConfig.games 
+    : activeCategory === "Hot"
+    ? siteConfig.games.filter(game => game.rtp >= 96)
+    : activeCategory === "New"
+    ? siteConfig.games.slice(-6)
+    : siteConfig.games.filter(game => game.category === activeCategory);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -69,6 +81,86 @@ const GamesPage = () => {
                 <p className="text-white/90 text-sm">
                   {category.description}
                 </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* How to Play Section */}
+        <section className="container mx-auto px-4 py-12">
+          <h2 className="text-3xl font-bold text-foreground mb-8">
+            How to Play Top777 Games
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                1
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-2">Download the App</h3>
+              <p className="text-muted-foreground text-sm">
+                First, download and install the Top 777 app on your Android or iOS device. The app is required to access and play all games.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                2
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-2">Choose Your Game Category</h3>
+              <p className="text-muted-foreground text-sm">
+                Once the app is installed, browse our game collection using the filter buttons. Select from All Games, Slots, Fish Games, Keno, Hot Games, or New Games.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                3
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-2">Select and Play a Game</h3>
+              <p className="text-muted-foreground text-sm">
+                Click on any game to start playing. Each game displays its name and RTP percentage. All games are free to play for entertainment purposes only.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Games List Section */}
+        <section className="container mx-auto px-4 py-12">
+          {/* Category Filter */}
+          <div className="flex flex-wrap gap-2 mb-8 justify-center">
+            {siteConfig.gameCategories.map((category) => (
+              <Button
+                key={category}
+                variant={activeCategory === category ? "default" : "outline"}
+                onClick={() => setActiveCategory(category)}
+                className="min-w-[80px]"
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
+
+          {/* Games Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {filteredGames.map((game, index) => (
+              <div
+                key={index}
+                className="group relative rounded-xl overflow-hidden bg-card border border-border transition-all hover:scale-105 hover:border-primary cursor-pointer"
+              >
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={game.image}
+                    alt={game.name}
+                    className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-3 text-center bg-card">
+                  <h3 className="text-sm font-semibold text-foreground truncate mb-1">
+                    {game.name}
+                  </h3>
+                  <span className="text-xs text-primary font-medium">
+                    RTP {game.rtp}%
+                  </span>
+                </div>
               </div>
             ))}
           </div>
