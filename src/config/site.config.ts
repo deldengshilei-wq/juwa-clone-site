@@ -51,37 +51,34 @@ export const siteConfig = {
   
   // Games Configuration
   games: [
-    {
-      name: "Lucky Fruits",
-      category: "Slots",
-      image: "https://images.unsplash.com/photo-1606167668584-78701c57f13d?q=80&w=400&auto=format&fit=crop",
-    },
-    {
-      name: "Ocean Fishing",
-      category: "Fishing Games",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=400&auto=format&fit=crop",
-    },
-    {
-      name: "Golden Keno",
-      category: "Keno",
-      image: "https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?q=80&w=400&auto=format&fit=crop",
-    },
-    {
-      name: "Dragon Tiger",
-      category: "Arcade",
-      image: "https://images.unsplash.com/photo-1511882150382-421056c89033?q=80&w=400&auto=format&fit=crop",
-    },
-    {
-      name: "Diamond Dazzle",
-      category: "Slots",
-      image: "https://images.unsplash.com/photo-1551431009-a802eeec77b1?q=80&w=400&auto=format&fit=crop",
-    },
-    {
-      name: "Lucky Wheel",
-      category: "Casual Games",
-      image: "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=400&auto=format&fit=crop",
-    },
+    { name: "45 President", category: "Slots", rtp: 91, image: "https://www.juwa777.com/Games/45%20President.png" },
+    { name: "7 Burning HOT", category: "Slots", rtp: 97, image: "https://www.juwa777.com/Games/7%20Burning%20HOT.png" },
+    { name: "7 Crystal Clovers", category: "Slots", rtp: 93, image: "https://www.juwa777.com/Games/7%20Crystal%20Clovers.png" },
+    { name: "777 Jackpot Inferno", category: "Slots", rtp: 95, image: "https://www.juwa777.com/Games/777%20Jackpot%20Inferno.png" },
+    { name: "777 Lucky", category: "Slots", rtp: 96, image: "https://www.juwa777.com/Games/777%20Lucky.png" },
+    { name: "Big Bass Bonzana", category: "Fish", rtp: 96, image: "https://www.juwa777.com/Games/Big%20Bass%20Bonzana.png" },
+    { name: "Black & White Double", category: "Slots", rtp: 95, image: "https://www.juwa777.com/Games/Black%20&%20White%20Double.png" },
+    { name: "Bonus Hot 7's", category: "Slots", rtp: 95, image: "https://www.juwa777.com/Games/Bonus%20Hot%207's.png" },
+    { name: "Buffalo Keno", category: "Keno", rtp: 93, image: "https://www.juwa777.com/Games/Buffalo%20Keno.png" },
+    { name: "Cash Cow", category: "Slots", rtp: 95, image: "https://www.juwa777.com/Games/Cash%20Cow.png" },
+    { name: "Cash Zone", category: "Slots", rtp: 97, image: "https://www.juwa777.com/Games/Cash%20Zone.png" },
+    { name: "Cherry Valentine", category: "Slots", rtp: 95, image: "https://www.juwa777.com/Games/Cherry%20Valentine.png" },
+    { name: "Deep Sea Predator", category: "Fish", rtp: 96, image: "https://www.juwa777.com/Games/Deep%20Sea%20Predator.png" },
+    { name: "Deep Sea", category: "Fish", rtp: 92, image: "https://www.juwa777.com/Games/Deep%20Sea.png" },
+    { name: "Diamond Riches", category: "Slots", rtp: 91, image: "https://www.juwa777.com/Games/Diamond%20Riches.png" },
+    { name: "Dragon Treasure", category: "Slots", rtp: 94, image: "https://www.juwa777.com/Games/Dragon%20Treasure.png" },
+    { name: "Fire Kirin", category: "Fish", rtp: 95, image: "https://www.juwa777.com/Games/Fire%20Kirin.png" },
+    { name: "Fortune Panda", category: "Slots", rtp: 96, image: "https://www.juwa777.com/Games/Fortune%20Panda.png" },
+    { name: "Golden Dragon", category: "Fish", rtp: 94, image: "https://www.juwa777.com/Games/Golden%20Dragon.png" },
+    { name: "Hot Fruits", category: "Slots", rtp: 95, image: "https://www.juwa777.com/Games/Hot%20Fruits.png" },
+    { name: "Keno Classic", category: "Keno", rtp: 92, image: "https://www.juwa777.com/Games/Keno%20Classic.png" },
+    { name: "Lucky Keno", category: "Keno", rtp: 91, image: "https://www.juwa777.com/Games/Lucky%20Keno.png" },
+    { name: "Ocean King", category: "Fish", rtp: 95, image: "https://www.juwa777.com/Games/Ocean%20King.png" },
+    { name: "Wild Buffalo", category: "Slots", rtp: 96, image: "https://www.juwa777.com/Games/Wild%20Buffalo.png" },
   ],
+  
+  // Game Categories for filtering
+  gameCategories: ["All", "Slots", "Fish", "Keno", "Hot", "New"],
 };
 
 export type Game = typeof siteConfig.games[number];
