@@ -7,6 +7,34 @@ export const siteConfig = {
   messenger: "https://m.me/top777",
   email: "support@top777.com",
   
+  // Floating Social Buttons
+  floatingSocial: [
+    {
+      name: "Telegram",
+      url: "https://t.me/top777",
+      color: "#0088cc",
+      icon: "telegram",
+    },
+    {
+      name: "Messenger",
+      url: "https://m.me/top777",
+      color: "#0084ff",
+      icon: "messenger",
+    },
+    {
+      name: "WhatsApp",
+      url: "https://wa.me/1234567890",
+      color: "#25D366",
+      icon: "whatsapp",
+    },
+    {
+      name: "Live Chat",
+      url: "https://livechat.top777.com",
+      color: "#ff6b35",
+      icon: "chat",
+    },
+  ],
+  
   // Customer Service
   customerService: {
     liveChatUrl: "https://livechat.top777.com",
