@@ -1,5 +1,5 @@
-import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -9,9 +9,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div>
             <Link to="/" className="mb-4 flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent">
-                <Sparkles className="h-6 w-6 text-primary-foreground" />
-              </div>
+              <img src={logo} alt="Top777 Logo" className="h-10 w-10 rounded-lg" />
               <span className="text-xl font-bold text-foreground">
                 Top<span className="text-primary">777</span>
               </span>

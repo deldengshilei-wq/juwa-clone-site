@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -28,9 +29,7 @@ const Header = () => {
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent">
-              <Sparkles className="h-6 w-6 text-primary-foreground" />
-            </div>
+            <img src={logo} alt="Top777 Logo" className="h-10 w-10 rounded-lg" />
             <span className="text-xl font-bold text-foreground">
               Top<span className="text-primary">777</span>
             </span>
