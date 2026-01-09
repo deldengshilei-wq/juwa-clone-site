@@ -13,11 +13,11 @@ const Footer = () => {
                 <Sparkles className="h-6 w-6 text-primary-foreground" />
               </div>
               <span className="text-xl font-bold text-foreground">
-                Juwa<span className="text-primary">777</span>
+                Top<span className="text-primary">777</span>
               </span>
             </a>
             <p className="text-sm text-muted-foreground">
-              Juwa777 is a free social gaming platform for entertainment purposes only.
+              Top777 is a free social gaming platform for entertainment purposes only.
               Please play responsibly. 18+ only.
             </p>
           </div>
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2024 Juwa777. All rights reserved. For entertainment purposes only.</p>
+          <p>© 2024 Top777. All rights reserved. For entertainment purposes only.</p>
         </div>
       </div>
     </footer>

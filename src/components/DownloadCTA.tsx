@@ -10,7 +10,7 @@ const DownloadCTA = () => {
           <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
             <div className="text-center lg:text-left">
               <h2 className="mb-4 text-3xl font-bold text-primary-foreground md:text-4xl">
-                Download Juwa777 App Now
+                Download Top777 App Now
               </h2>
               <p className="text-lg text-primary-foreground/80">
                 Enjoy 100+ free social casino games on your mobile device
