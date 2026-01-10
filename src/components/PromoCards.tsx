@@ -17,7 +17,7 @@ const promos = [
     label: "Play together and enjoy",
     title: "$5 Referral Bonus",
     subtitle: "",
-    gradient: "gradient-gold",
+    gradient: "gradient-blue",
   },
 ];
 
