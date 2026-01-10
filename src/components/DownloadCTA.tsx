@@ -1,40 +1,34 @@
-import { Button } from "@/components/ui/button";
-import { Apple, Smartphone } from "lucide-react";
-import { siteConfig } from "@/config/site.config";
+import { ShieldCheck } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const DownloadCTA = () => {
   return (
-    <section className="bg-card py-20">
+    <section className="bg-card py-6">
       <div className="container mx-auto px-4">
-        <div className="rounded-2xl gradient-red p-8 md:p-12">
-          <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
-            <div className="text-center lg:text-left">
-              <h2 className="mb-4 text-3xl font-bold text-primary-foreground md:text-4xl">
-                Download Top777 App Now
-              </h2>
-              <p className="text-lg text-primary-foreground/80">
-                Enjoy 100+ free social casino games on your mobile device
-              </p>
+        <div className="rounded-xl gradient-red px-6 py-4 md:px-8 md:py-5">
+          <div className="flex items-center justify-between">
+            {/* Left - Icon & Text */}
+            <div className="flex items-center gap-4">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white/30">
+                <ShieldCheck className="h-5 w-5 text-white" />
+              </div>
+              <div>
+                <h2 className="text-lg font-bold uppercase tracking-wide text-white md:text-xl">
+                  Made to Play Safely
+                </h2>
+                <p className="text-sm text-white/80">
+                  Your safety and enjoyment are our priority.
+                </p>
+              </div>
             </div>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href={siteConfig.download.ios} target="_blank" rel="noopener noreferrer">
-                <Button
-                  size="lg"
-                  className="gap-2 bg-black text-white hover:bg-black/80"
-                >
-                  <Apple className="h-5 w-5" />
-                  App Store
-                </Button>
-              </a>
-              <a href={siteConfig.download.android} target="_blank" rel="noopener noreferrer">
-                <Button
-                  size="lg"
-                  className="gap-2 bg-black text-white hover:bg-black/80"
-                >
-                  <Smartphone className="h-5 w-5" />
-                  Google Play
-                </Button>
-              </a>
+            
+            {/* Right - Logo */}
+            <div className="hidden sm:block">
+              <img 
+                src={logo} 
+                alt="Top777 Logo" 
+                className="h-12 w-auto drop-shadow-lg"
+              />
             </div>
           </div>
         </div>
