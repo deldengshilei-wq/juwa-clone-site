@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div>
             <Link to="/" className="mb-4 flex items-center gap-2">
-              <img src={logo} alt="Top777 Logo" className="h-10 w-10 rounded-lg" />
+              <img src={logo} alt="Top777 Logo" className="h-10 w-auto object-contain rounded-lg" />
               <span className="text-xl font-bold text-foreground">
                 Top<span className="text-primary">777</span>
               </span>

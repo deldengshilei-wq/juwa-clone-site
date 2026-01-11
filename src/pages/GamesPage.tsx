@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
+import DownloadCTA from "@/components/DownloadCTA";
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -49,10 +50,10 @@ const GamesPage = () => {
             Discover over 100 games available in the Top 777 app. Browse our selection of slots, fish shooting games, and keno for entertainment purposes only. Download the Top777 app to access the full games library on Android & iOS.
           </p>
           <Button size="lg" className="gap-2" asChild>
-            <Link to="/blog">
+            <a href={siteConfig.downLoadUrl} target="_blank" rel="noopener noreferrer">
               <Sparkles className="h-5 w-5" />
               Download Top777 App
-            </Link>
+            </a>
           </Button>
         </section>
 
@@ -166,6 +167,7 @@ const GamesPage = () => {
           </div>
         </section>
       </main>
+      <DownloadCTA />
       <Footer />
       <FloatingSocial />
     </div>

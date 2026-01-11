@@ -1,30 +1,32 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
-import { ArrowRight } from "lucide-react";
+import DownloadCTA from "@/components/DownloadCTA";
+import { siteConfig } from "@/config/site.config";
 import gamingPlatformImg from "@/assets/blog/gaming-platform.jpg";
-import originStoryImg from "@/assets/blog/origin-story.jpg";
+import paymentGuideImg from "@/assets/blog/payment-guideImg.jpg";
 import appDownloadImg from "@/assets/blog/app-download.jpg";
 import bonusRewardsImg from "@/assets/blog/bonus-rewards.jpg";
+import affiliateImg from "@/assets/blog/join-us.jpg";
 
 const blogPosts = [
   {
     id: 1,
     category: "Platform Guides",
     readTime: "8 min read",
-    title: "Top2: Complete Guide to Top2.0 Gaming Platform",
-    description: "Discover Top2 and Top2.0 - a comprehensive guide to the gaming platform, features, games, and how to get started. Learn about Top2 slots and casino games.",
-    date: "January 13, 2025",
+    title: "Top777: Complete Guide to Top777 Gaming Platform",
+    description: "Discover Top777 and Top777 - a comprehensive guide to the gaming platform, features, games, and how to get started. Learn about Top777 slots and casino games.",
+    date: "January 11, 2026",
     image: gamingPlatformImg,
   },
   {
     id: 2,
-    category: "Company Story",
-    readTime: "6 min read",
-    title: "The Origin of Top: How Top777 Came to Life",
-    description: "Discover the fascinating story of how Top777 was born during the COVID-19 pandemic, from the Sanskrit word \"Top\" to becoming one of the largest online gaming platforms.",
-    date: "December 18, 2024",
-    image: originStoryImg,
+    category: "Payment Methods",
+    readTime: "4 min read",
+    title: "Fast Withdrawals & Deposits: A Guide to Top777 Cashier",
+    description: "A complete walkthrough of the payment methods available on Top777. Learn how to deposit and withdraw your winnings quickly using GCash, PayMaya, and more.",
+    date: "January 8, 2026",
+    image: paymentGuideImg,
   },
   {
     id: 3,
@@ -32,7 +34,7 @@ const blogPosts = [
     readTime: "5 min read",
     title: "Download Top 777 App: Complete Installation Guide for Android and iOS",
     description: "Step-by-step instructions to download and install the latest version of Top 777 on your Android or iOS device. Get started with over 100 exciting games today.",
-    date: "January 7, 2025",
+    date: "January 7, 2026",
     image: appDownloadImg,
   },
   {
@@ -41,9 +43,19 @@ const blogPosts = [
     readTime: "6 min read",
     title: "Top 777 No Deposit Bonus: Welcome Offers and Bonus Guide",
     description: "Complete guide to Top 777 bonuses including no deposit bonus offers, welcome bonuses, referral rewards, and daily bonus opportunities.",
-    date: "January 5, 2025",
+    date: "January 5, 2026",
     image: bonusRewardsImg,
   },
+  {
+    id: 5,
+    category: "Affiliate",
+    readTime: "5 min read",
+    title: "Join Top777 Affiliate Program: Grow Your Wealth Together",
+    description: "Looking for a reliable partnership? Join the Top777 Affiliate Program today. Enjoy high commissions, professional support, and real-time tracking.",
+    date: "January 12, 2026",
+    image: affiliateImg,
+    link: siteConfig.agentUrl,
+  }
 ];
 
 const BlogPage = () => {
@@ -90,9 +102,16 @@ const BlogPage = () => {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-muted-foreground text-sm">{post.date}</span>
-                    <button className="text-primary hover:text-primary/80 inline-flex items-center gap-1 text-sm font-medium">
-                      Read more <ArrowRight className="h-4 w-4" />
-                    </button>
+                    {post.link && (
+                      <a
+                        href={post.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary underline text-base font-semibold"
+                      >
+                        Join Us Now
+                      </a>
+                    )}
                   </div>
                 </div>
               </article>
@@ -100,6 +119,7 @@ const BlogPage = () => {
           </div>
         </section>
       </main>
+      <DownloadCTA />
       <Footer />
       <FloatingSocial />
     </div>

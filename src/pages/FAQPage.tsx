@@ -1,7 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
+import DownloadCTA from "@/components/DownloadCTA";
 import { Link } from "react-router-dom";
+import { siteConfig } from "@/config/site.config";
+import logo from "@/assets/logo.png";
 
 const faqItems = [
   {
@@ -66,13 +69,13 @@ const FAQPage = () => {
       <main className="pt-8">
         {/* Logo & Title Section */}
         <section className="container mx-auto px-4 py-12 text-center">
-          <div className="w-64 h-40 mx-auto mb-8 bg-gradient-to-br from-red-500 to-yellow-500 rounded-2xl flex items-center justify-center">
-            <span className="text-4xl font-bold text-white">TOP</span>
+          <div className="w-64 mx-auto mb-8">
+            <img src={logo} alt="Top777 Logo" className="w-full h-auto max-w-[256px]" />
           </div>
           
           {/* Breadcrumb */}
           <div className="text-muted-foreground mb-4">
-            <Link to="/contact" className="hover:text-primary">Contact</Link>
+            <a href={siteConfig.facebookHome} target="_blank" rel="noopener noreferrer" className="hover:text-primary">Contact</a>
             <span className="mx-2">{">"}</span>
             <span>FAQ</span>
           </div>
@@ -81,7 +84,7 @@ const FAQPage = () => {
             Frequently Asked Questions About Top777
           </h1>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Find answers to common questions about Top777 free social gaming platform. Learn about our games, how to play, platform features, and more. If you don't find what you're looking for, feel free to <Link to="/contact" className="text-primary hover:underline">contact our support team</Link>.
+            Find answers to common questions about Top777 free social gaming platform. Learn about our games, how to play, platform features, and more. If you don't find what you're looking for, feel free to <a href={siteConfig.facebookHome} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">contact our support team</a>.
           </p>
         </section>
 
@@ -121,15 +124,18 @@ const FAQPage = () => {
             <p className="text-muted-foreground mb-4">
               Still have questions? We're here to help!
             </p>
-            <Link
-              to="/contact"
+            <a
+              href={siteConfig.facebookHome}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Contact Support
-            </Link>
+            </a>
           </div>
         </section>
       </main>
+      <DownloadCTA />
       <Footer />
       <FloatingSocial />
     </div>

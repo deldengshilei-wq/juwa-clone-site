@@ -45,7 +45,7 @@ const PromoCards = () => {
               className="mt-4 border-primary-foreground/50 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
               asChild
             >
-              <a href={siteConfig.facebook} target="_blank" rel="noopener noreferrer">
+              <a href={siteConfig.facebookHome} target="_blank" rel="noopener noreferrer">
                 Join Now
               </a>
             </Button>

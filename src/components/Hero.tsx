@@ -28,7 +28,7 @@ const Hero = () => {
           </p>
           <div className="flex flex-wrap gap-4">
             <Button size="lg" className="gap-2 glow-red" asChild>
-              <a href={siteConfig.facebook} target="_blank" rel="noopener noreferrer">
+              <a href={siteConfig.facebookHome} target="_blank" rel="noopener noreferrer">
                 <Sparkles className="h-5 w-5" />
                 Play Now
               </a>

@@ -30,7 +30,7 @@ const Header = () => {
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Top777 Logo" className="h-10 w-10 rounded-lg" />
+            <img src={logo} alt="Top777 Logo" className="h-10 w-auto object-contain rounded-lg" />
             <span className="text-xl font-bold text-foreground">
               Top<span className="text-primary">777</span>
             </span>
@@ -57,7 +57,7 @@ const Header = () => {
               <Link to="/faq">FAQ</Link>
             </Button>
             <Button size="sm" className="gap-2" asChild>
-              <a href={siteConfig.facebook} target="_blank" rel="noopener noreferrer">
+              <a href={siteConfig.facebookHome} target="_blank" rel="noopener noreferrer">
                 <Sparkles className="h-4 w-4" />
                 Play now
               </a>
@@ -98,7 +98,7 @@ const Header = () => {
                   <Link to="/faq" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
                 </Button>
                 <Button size="sm" className="gap-2" asChild>
-                  <a href={siteConfig.facebook} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
+                  <a href={siteConfig.facebookHome} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
                     <Sparkles className="h-4 w-4" />
                     Play now
                   </a>

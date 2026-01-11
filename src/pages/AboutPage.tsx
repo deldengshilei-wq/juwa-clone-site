@@ -1,9 +1,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
+import DownloadCTA from "@/components/DownloadCTA";
 import { Shield, Users, Zap, Award, HeadphonesIcon, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import { siteConfig } from "@/config/site.config";
 
 const features = [
   {
@@ -46,7 +48,7 @@ const AboutPage = () => {
         {/* Logo & Title Section */}
         <section className="container mx-auto px-4 py-12 text-center">
           <div className="w-64 mx-auto mb-8">
-            <img src={logo} alt="Top777 Logo" className="w-full h-auto" />
+            <img src={logo} alt="Top777 Logo" className="w-full h-auto max-w-[256px]" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             About Top777 – Your Free Social Gaming Platform
@@ -78,7 +80,7 @@ const AboutPage = () => {
               Our Mission
             </h2>
             <p className="text-muted-foreground">
-              Our mission is to provide safe, accessible, and engaging gameplay with unmatched customer service. We believe that gaming should be fun, fair, and accessible to everyone. That's why we've created a platform where players can enjoy casino-style games without any real-money gambling or cash payouts. If you have questions, check our <Link to="/faq" className="text-primary hover:underline">FAQ page</Link> or <Link to="/contact" className="text-primary hover:underline">contact our support team</Link>.
+              Our mission is to provide safe, accessible, and engaging gameplay with unmatched customer service. We believe that gaming should be fun, fair, and accessible to everyone. That's why we've created a platform where players can enjoy casino-style games without any real-money gambling or cash payouts. If you have questions, check our <Link to="/faq" className="text-primary hover:underline">FAQ page</Link> or <a href={siteConfig.facebookService} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">contact our support team</a>.
             </p>
           </div>
         </section>
@@ -106,6 +108,7 @@ const AboutPage = () => {
           </div>
         </section>
       </main>
+      <DownloadCTA />
       <Footer />
       <FloatingSocial />
     </div>

@@ -27,7 +27,7 @@ const DownloadCTA = () => {
               <img 
                 src={logo} 
                 alt="Top777 Logo" 
-                className="h-12 w-auto drop-shadow-lg"
+                className="h-12 w-auto object-contain drop-shadow-lg"
               />
             </div>
           </div>
