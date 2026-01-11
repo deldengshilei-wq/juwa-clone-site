@@ -2,6 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
 import { ArrowRight } from "lucide-react";
+import gamingPlatformImg from "@/assets/blog/gaming-platform.jpg";
+import originStoryImg from "@/assets/blog/origin-story.jpg";
+import appDownloadImg from "@/assets/blog/app-download.jpg";
+import bonusRewardsImg from "@/assets/blog/bonus-rewards.jpg";
 
 const blogPosts = [
   {
@@ -11,7 +15,7 @@ const blogPosts = [
     title: "Top2: Complete Guide to Top2.0 Gaming Platform",
     description: "Discover Top2 and Top2.0 - a comprehensive guide to the gaming platform, features, games, and how to get started. Learn about Top2 slots and casino games.",
     date: "January 13, 2025",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=250&fit=crop",
+    image: gamingPlatformImg,
   },
   {
     id: 2,
@@ -20,7 +24,7 @@ const blogPosts = [
     title: "The Origin of Top: How Top777 Came to Life",
     description: "Discover the fascinating story of how Top777 was born during the COVID-19 pandemic, from the Sanskrit word \"Top\" to becoming one of the largest online gaming platforms.",
     date: "December 18, 2024",
-    image: "https://images.unsplash.com/photo-1493711662062-fa541f7f3d24?w=400&h=250&fit=crop",
+    image: originStoryImg,
   },
   {
     id: 3,
@@ -29,7 +33,7 @@ const blogPosts = [
     title: "Download Top 777 App: Complete Installation Guide for Android and iOS",
     description: "Step-by-step instructions to download and install the latest version of Top 777 on your Android or iOS device. Get started with over 100 exciting games today.",
     date: "January 7, 2025",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop",
+    image: appDownloadImg,
   },
   {
     id: 4,
@@ -38,7 +42,7 @@ const blogPosts = [
     title: "Top 777 No Deposit Bonus: Welcome Offers and Bonus Guide",
     description: "Complete guide to Top 777 bonuses including no deposit bonus offers, welcome bonuses, referral rewards, and daily bonus opportunities.",
     date: "January 5, 2025",
-    image: "https://images.unsplash.com/photo-1518544801976-3e159e50e5bb?w=400&h=250&fit=crop",
+    image: bonusRewardsImg,
   },
 ];
 
