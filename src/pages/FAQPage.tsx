@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: "Contact Support",
-    answer: "Our support team is available to help you with any questions or issues. You can reach us through our contact page, live chat, or email at top@top777.com. We typically respond within 24-48 hours.",
+    answer: "Our support team is available to help you with any questions or issues. You can reach us through our contact page. We typically respond within 24-48 hours.",
     troubleshooting: [],
   },
 ];

@@ -23,13 +23,13 @@ export const siteConfig = {
     },
     {
       name: "WhatsApp",
-      url: "https://www.google.com.hk/",
+      url: "",
       color: "#25D366",
       icon: "whatsapp",
     },
     {
       name: "Live Chat",
-      url: "https://www.google.com.hk/",
+      url: "",
       color: "#ff6b35",
       icon: "chat",
     },

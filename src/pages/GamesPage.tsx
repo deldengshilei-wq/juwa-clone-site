@@ -123,7 +123,7 @@ const GamesPage = () => {
         </section>
 
         {/* Games List Section */}
-        <section className="container mx-auto px-4 py-12">
+        <section id="games-list" className="container mx-auto px-4 py-12">
           {/* Category Filter */}
           <div className="flex flex-wrap gap-2 mb-8 justify-center">
             {siteConfig.gameCategories.map((category) => (

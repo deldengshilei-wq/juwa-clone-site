@@ -3,8 +3,18 @@ import { siteConfig } from "@/config/site.config";
 import { Link } from "react-router-dom";
 
 const Games = () => {
-  // Take first 16 games for display
-  const displayGames = siteConfig.games.slice(0, 16);
+  // Fisher-Yates shuffle algorithm to randomly select 12 games
+  const shuffleArray = <T,>(array: T[]): T[] => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+
+  // Randomly select 12 games from siteConfig.games
+  const displayGames = shuffleArray(siteConfig.games).slice(0, 12);
 
   return (
     <section id="games" className="bg-background py-16">
@@ -38,7 +48,7 @@ const Games = () => {
           ))}
         </div>
         <div className="mt-10 text-center">
-          <Link to="/games">
+          <Link to="/games#games-list">
             <Button size="lg" className="px-8">
               View All Games
             </Button>

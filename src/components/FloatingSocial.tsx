@@ -29,9 +29,12 @@ const SocialIcon = ({ icon }: { icon: string }) => {
 };
 
 const FloatingSocial = () => {
+  // 过滤掉 url 为空的社交按钮
+  const validSocials = siteConfig.floatingSocial.filter(social => social.url && social.url !== "");
+
   return (
-    <div className="fixed bottom-6 right-4 z-50 flex flex-col gap-3">
-      {siteConfig.floatingSocial.map((social, index) => (
+    <div className="fixed bottom-6 right-4 z-50 flex flex-col-reverse gap-3">
+      {validSocials.map((social, index) => (
         <a
           key={social.name}
           href={social.url}
