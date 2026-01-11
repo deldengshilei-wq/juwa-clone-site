@@ -12,18 +12,27 @@ const Games = () => {
         <h2 className="mb-10 text-center text-3xl font-bold text-foreground md:text-4xl">
           Our Games
         </h2>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {displayGames.map((game, index) => (
             <div
               key={index}
-              className="group cursor-pointer"
+              className="group relative rounded-xl overflow-hidden bg-card border border-border transition-all hover:scale-105 hover:border-primary cursor-pointer"
             >
-              <div className="aspect-square overflow-hidden rounded-xl border-2 border-muted bg-card transition-all duration-300 hover:border-primary hover:shadow-lg hover:shadow-primary/20">
+              <div className="aspect-square overflow-hidden">
                 <img
                   src={game.image}
                   alt={game.name}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                  loading="lazy"
                 />
+              </div>
+              <div className="p-3 text-center bg-card">
+                <h3 className="text-sm font-semibold text-foreground truncate mb-1">
+                  {game.name}
+                </h3>
+                <span className="text-xs text-primary font-medium">
+                  RTP {game.rtp}%
+                </span>
               </div>
             </div>
           ))}
