@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/config/site.config";
 
 const promos = [
   {
@@ -42,8 +43,11 @@ const PromoCards = () => {
             <Button
               variant="outline"
               className="mt-4 border-primary-foreground/50 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
+              asChild
             >
-              Join Now
+              <a href={siteConfig.facebook} target="_blank" rel="noopener noreferrer">
+                Join Now
+              </a>
             </Button>
           </div>
         ))}

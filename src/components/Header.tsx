@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import { siteConfig } from "@/config/site.config";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -56,10 +57,10 @@ const Header = () => {
               <Link to="/faq">FAQ</Link>
             </Button>
             <Button size="sm" className="gap-2" asChild>
-              <Link to="/games">
+              <a href={siteConfig.facebook} target="_blank" rel="noopener noreferrer">
                 <Sparkles className="h-4 w-4" />
                 Play now
-              </Link>
+              </a>
             </Button>
           </div>
 
@@ -97,10 +98,10 @@ const Header = () => {
                   <Link to="/faq" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
                 </Button>
                 <Button size="sm" className="gap-2" asChild>
-                  <Link to="/games" onClick={() => setMobileMenuOpen(false)}>
+                  <a href={siteConfig.facebook} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
                     <Sparkles className="h-4 w-4" />
                     Play now
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </nav>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, ArrowRight } from "lucide-react";
+import { siteConfig } from "@/config/site.config";
 
 const Hero = () => {
   return (
@@ -26,13 +27,17 @@ const Hero = () => {
             the premier Top game platform with over 100 free social casino games.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="gap-2 glow-red">
-              <Sparkles className="h-5 w-5" />
-              Play Now
+            <Button size="lg" className="gap-2 glow-red" asChild>
+              <a href={siteConfig.facebook} target="_blank" rel="noopener noreferrer">
+                <Sparkles className="h-5 w-5" />
+                Play Now
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="gap-2">
-              Get Started
-              <ArrowRight className="h-5 w-5" />
+            <Button size="lg" variant="outline" className="gap-2" asChild>
+              <a href={siteConfig.downLoadUrl} target="_blank" rel="noopener noreferrer">
+                Get Started
+                <ArrowRight className="h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>

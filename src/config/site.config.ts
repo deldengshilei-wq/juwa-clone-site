@@ -41,7 +41,7 @@ export const siteConfig = {
     supportEmail: "support@top777.com",
     supportHours: "24/7",
   },
-  
+  downLoadUrl: "https://top777.games/",
   // Download Links
   download: {
     android: "https://download.top777.com/android",
