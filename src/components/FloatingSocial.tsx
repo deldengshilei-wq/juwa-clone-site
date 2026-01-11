@@ -35,6 +35,8 @@ const FloatingSocial = () => {
         <a
           key={social.name}
           href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
           className="group relative flex h-12 w-12 items-center justify-center rounded-full border-2 text-white shadow-lg transition-all duration-300 hover:scale-110"
           style={{
             backgroundColor: social.color,

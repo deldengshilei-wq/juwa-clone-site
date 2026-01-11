@@ -11,25 +11,25 @@ export const siteConfig = {
   floatingSocial: [
     {
       name: "Telegram",
-      url: "https://t.me/top777",
+      url: "https://www.google.com.hk/",
       color: "#0088cc",
       icon: "telegram",
     },
     {
       name: "Messenger",
-      url: "https://m.me/top777",
+      url: "https://www.google.com.hk/",
       color: "#0084ff",
       icon: "messenger",
     },
     {
       name: "WhatsApp",
-      url: "https://wa.me/1234567890",
+      url: "https://www.google.com.hk/",
       color: "#25D366",
       icon: "whatsapp",
     },
     {
       name: "Live Chat",
-      url: "https://livechat.top777.com",
+      url: "https://www.google.com.hk/",
       color: "#ff6b35",
       icon: "chat",
     },
