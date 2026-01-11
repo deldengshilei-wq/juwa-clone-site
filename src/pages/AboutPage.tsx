@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
 import { Shield, Users, Zap, Award, HeadphonesIcon, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const features = [
   {
@@ -44,8 +45,8 @@ const AboutPage = () => {
       <main className="pt-8">
         {/* Logo & Title Section */}
         <section className="container mx-auto px-4 py-12 text-center">
-          <div className="w-64 h-40 mx-auto mb-8 bg-gradient-to-br from-red-500 to-yellow-500 rounded-2xl flex items-center justify-center">
-            <span className="text-4xl font-bold text-white">TOP</span>
+          <div className="w-64 mx-auto mb-8">
+            <img src={logo} alt="Top777 Logo" className="w-full h-auto" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             About Top777 – Your Free Social Gaming Platform
