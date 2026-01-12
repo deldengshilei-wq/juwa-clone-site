@@ -1,8 +1,45 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
+import { useEffect } from "react";
 
 const Hero = () => {
+  useEffect(() => {
+    // Load OpenInstall script
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.charset = "UTF-8";
+    script.src = "web/openinstall-c4z4rs.js";
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup: remove script when component unmounts
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
+  const handleGetStarted = () => {
+    if (typeof (window as any).OpenInstall !== 'undefined') {
+      const OpenInstall = (window as any).OpenInstall;
+      const data = OpenInstall.parseUrlParams();
+      data['region'] = 'us';
+      if (!data['sid']) {
+        const m = window.location.pathname.match(/\/vip(\d+)/);
+        if (m) data['sid'] = m[1];
+      }
+      const installInstance = new OpenInstall({
+        appKey: "c4z4rs",
+        onready: function() {
+          //this.schemeWakeup();
+          installInstance.wakeupOrInstall();
+        },
+        data
+      });
+    }
+  };
+
   return (
     <section className="relative min-h-[600px] overflow-hidden">
       {/* Background image */}
@@ -33,11 +70,14 @@ const Hero = () => {
                 Play Now
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="gap-2" asChild>
-              <a href={siteConfig.downLoadUrl} target="_blank" rel="noopener noreferrer">
-                Get Started
-                <ArrowRight className="h-5 w-5" />
-              </a>
+            <Button
+              size="lg"
+              variant="outline"
+              className="gap-2"
+              onClick={handleGetStarted}
+            >
+              Get Started
+              <ArrowRight className="h-5 w-5" />
             </Button>
           </div>
         </div>
