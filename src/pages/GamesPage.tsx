@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
@@ -28,9 +28,52 @@ const gameCategories = [
 
 const GamesPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const installInstanceRef = useRef<any>(null);
+    useEffect(() => {
+    // Load OpenInstall script
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.charset = "UTF-8";
+    script.src = "web/openinstall-c4z4rs.js";
+    document.body.appendChild(script);
 
-  const filteredGames = activeCategory === "All" 
-    ? siteConfig.games 
+    // Initialize OpenInstall when script is loaded
+    script.onload = () => {
+      if (typeof (window as any).OpenInstall !== 'undefined') {
+        const OpenInstall = (window as any).OpenInstall;
+        const data = OpenInstall.parseUrlParams();
+        data['region'] = 'us';
+        if (!data['sid']) {
+          const m = window.location.pathname.match(/\/vip(\d+)/);
+          if (m) data['sid'] = m[1];
+        }
+        const instance = new OpenInstall({
+          appKey: "c4z4rs",
+          onready: function() {
+            //this.schemeWakeup();
+          },
+          data
+        });
+        installInstanceRef.current = instance;
+      }
+    };
+
+    return () => {
+      // Cleanup: remove script when component unmounts
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
+  const handleGetStarted = () => {
+    if (installInstanceRef.current) {
+      installInstanceRef.current.wakeupOrInstall();
+    }
+  };
+
+  const filteredGames = activeCategory === "All"
+    ? siteConfig.games
     : activeCategory === "Hot"
     ? siteConfig.games.filter(game => game.rtp >= 96)
     : activeCategory === "New"
@@ -49,11 +92,9 @@ const GamesPage = () => {
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-8">
             Discover over 100 games available in the Top 777 app. Browse our selection of slots, fish shooting games, and keno for entertainment purposes only. Download the Top777 app to access the full games library on Android & iOS.
           </p>
-          <Button size="lg" className="gap-2" asChild>
-            <a href={siteConfig.downLoadUrl} target="_blank" rel="noopener noreferrer">
-              <Sparkles className="h-5 w-5" />
-              Download Top777 App
-            </a>
+          <Button size="lg" className="gap-2" onClick={handleGetStarted}>
+            <Sparkles className="h-5 w-5" />
+            Download Top777 App
           </Button>
         </section>
 

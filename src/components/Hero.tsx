@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const Hero = () => {
+  const installInstanceRef = useRef<any>(null);
+
   useEffect(() => {
     // Load OpenInstall script
     const script = document.createElement("script");
@@ -11,6 +13,27 @@ const Hero = () => {
     script.charset = "UTF-8";
     script.src = "web/openinstall-c4z4rs.js";
     document.body.appendChild(script);
+
+    // Initialize OpenInstall when script is loaded
+    script.onload = () => {
+      if (typeof (window as any).OpenInstall !== 'undefined') {
+        const OpenInstall = (window as any).OpenInstall;
+        const data = OpenInstall.parseUrlParams();
+        data['region'] = 'us';
+        if (!data['sid']) {
+          const m = window.location.pathname.match(/\/vip(\d+)/);
+          if (m) data['sid'] = m[1];
+        }
+        const instance = new OpenInstall({
+          appKey: "c4z4rs",
+          onready: function() {
+            //this.schemeWakeup();
+          },
+          data
+        });
+        installInstanceRef.current = instance;
+      }
+    };
 
     return () => {
       // Cleanup: remove script when component unmounts
@@ -21,22 +44,8 @@ const Hero = () => {
   }, []);
 
   const handleGetStarted = () => {
-    if (typeof (window as any).OpenInstall !== 'undefined') {
-      const OpenInstall = (window as any).OpenInstall;
-      const data = OpenInstall.parseUrlParams();
-      data['region'] = 'us';
-      if (!data['sid']) {
-        const m = window.location.pathname.match(/\/vip(\d+)/);
-        if (m) data['sid'] = m[1];
-      }
-      const installInstance = new OpenInstall({
-        appKey: "c4z4rs",
-        onready: function() {
-          //this.schemeWakeup();
-          installInstance.wakeupOrInstall();
-        },
-        data
-      });
+    if (installInstanceRef.current) {
+      installInstanceRef.current.wakeupOrInstall();
     }
   };
 
