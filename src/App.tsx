@@ -9,6 +9,7 @@ import GamesPage from "./pages/GamesPage";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
 import FAQPage from "./pages/FAQPage";
+import CooperationPage from "./pages/CooperationPage";
 import NotFound from "./pages/NotFound";
 
 // ScrollToTop component to reset scroll position on route change
@@ -54,6 +55,7 @@ const App = () => (
           <Route path="/about" element={<AboutPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/faq" element={<FAQPage />} />
+          <Route path="/cooperation" element={<CooperationPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

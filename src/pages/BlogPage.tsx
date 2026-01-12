@@ -2,7 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingSocial from "@/components/FloatingSocial";
 import DownloadCTA from "@/components/DownloadCTA";
+import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site.config";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import gamingPlatformImg from "@/assets/blog/gaming-platform.jpg";
 import paymentGuideImg from "@/assets/blog/payment-guideImg.jpg";
 import appDownloadImg from "@/assets/blog/app-download.jpg";
@@ -103,14 +106,12 @@ const BlogPage = () => {
                   <div className="flex items-center justify-between">
                     <span className="text-muted-foreground text-sm">{post.date}</span>
                     {post.link && (
-                      <a
-                        href={post.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary underline text-base font-semibold"
-                      >
-                        Join Us Now
-                      </a>
+                      <Link to="/cooperation">
+                        <Button variant="outline" className="border-red-500/50 text-red-400 hover:bg-red-500/10">
+                          Join Us Now
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </Link>
                     )}
                   </div>
                 </div>
